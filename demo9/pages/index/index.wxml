@@ -1,0 +1,22 @@
+<swiper indicator-dots="{{indicatorDots}}" autoplay="{{autoplay}}" interval="{{interval}}" duration="{{duration}}">
+	<block wx:for="{{imgUrls}}">
+		<swiper-item bindtap="bannerUrl()">
+			<navigator hover-class="none" url="/pages/details/details?id={{item.activity}}&title={{item.title}}">
+				<image src="/{{item.image}}" class="slide-image"/>
+			</navigator>
+		</swiper-item>
+	</block>
+</swiper>
+<view class="ws_menu">
+	<navigator hover-class="none" url="/pages/product/product"><image src="https://m.youzhu.com/images/weChatAppImages/icon_1.png" /><text>装修产品</text></navigator>
+	<navigator hover-class="none" url="/pages/design/design"><image src="https://m.youzhu.com/images/weChatAppImages/icon_2.png" /><text>定制设计</text></navigator>
+	<!-- <navigator hover-class="none" url="{{bannerList.designList.length == 1 ? '/pages/details/details?id=' + bannerList.designList[0].activity + '&title=' + bannerList.designList[0].title : '/pages/design/design'}}"><image src="https://m.youzhu.com/images/weChatAppImages/icon_2.png" /><text>定制设计</text></navigator> -->
+	<navigator hover-class="none" url="/pages/offer/offer"><image src="https://m.youzhu.com/images/weChatAppImages/icon_3.png" /><text>免费报价</text></navigator>
+	<navigator hover-class="none" url="{{bannerList.activityList.length == 1 ? '/pages/details/details?id=' + bannerList.activityList[0].activity + '&title=' + bannerList.activityList[0].title : '/pages/activity/activity'}}"><image src="https://m.youzhu.com/images/weChatAppImages/icon_4.png" /><text>当期活动</text></navigator>
+	<navigator hover-class="none" url="/pages/lineshoplist/lineshoplist"><image src="https://m.youzhu.com/images/weChatAppImages/icon_5.png" /><text>线下门店</text></navigator>
+	<navigator hover-class="none" url="/pages/coupon/coupon"><image src="https://m.youzhu.com/images/weChatAppImages/icon_6.png" /><text>专属优惠</text></navigator>
+</view>
+
+<view class="ws_kf">
+	<button open-type="contact">联系客服</button>
+</view>

@@ -1,0 +1,6 @@
+<!-- sample.wxml -->
+<view class="btn-area">
+  <navigator url="/pages/index/index" hover-class="navigator-hover">首页</navigator>
+  <navigator url="/pages/activity/activity" hover-class="navigator-hover">活动</navigator>
+  <navigator url="/pages/logs/logs" hover-class="navigator-hover">日志</navigator>
+</view>

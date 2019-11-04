@@ -1,0 +1,20 @@
+{
+	"pages": [
+		"pages/index/index",
+		"pages/offer/offer",
+		"pages/lineshop/lineshop",
+		"pages/lineshoplist/lineshoplist",
+		"pages/product/product",
+		"pages/signup/signup",
+        "pages/coupon/coupon",
+        "pages/activity/activity",
+        "pages/details/details",
+        "pages/design/design"
+	],
+	"window": {
+		"backgroundTextStyle": "dark",
+		"navigationBarBackgroundColor": "#fff",
+		"navigationBarTitleText": "有住网",
+		"navigationBarTextStyle": "black"
+	}
+}

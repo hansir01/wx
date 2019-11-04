@@ -1,0 +1,63 @@
+<view class="navbar">  
+  <text wx:for="{{navbar}}" data-idx="{{index}}" class="item {{currentTab==index ? 'active' : ''}}" wx:key="unique" bindtap="navbarTap">{{item}}</text>  
+</view>  
+  
+<!--首页-->  
+<view hidden="{{currentTab!==0}}">
+  <view>
+	<image style="width:100%;" src="/image/gyjy_01.jpg" mode="{{item.mode}}"></image>
+	<text class="page__desc">图片</text>
+  </view>
+  <view>
+	<image style="width:100%;" src="/image/gyjy_01.jpg" mode="{{item.mode}}"></image>
+	<text class="page__desc">图片</text>
+  </view>
+  <view>
+	<image style="width:100%;" src="/image/gyjy_01.jpg" mode="{{item.mode}}"></image>
+	<text class="page__desc">图片</text>
+  </view>
+  <view>
+	<image style="width:100%;" src="/image/gyjy_01.jpg" mode="{{item.mode}}"></image>
+	<text class="page__desc">图片</text>
+  </view>
+</view>
+  
+<!--搜索-->  
+<view hidden="{{currentTab!==1}}">
+  <view>
+	<image style="width:100%;" src="/image/gyjy_03.jpg" mode="{{item.mode}}"></image>
+	<text class="page__desc">图片</text>
+  </view>
+  <view>
+	<image style="width:100%;" src="/image/gyjy_03.jpg" mode="{{item.mode}}"></image>
+	<text class="page__desc">图片</text>
+  </view>
+  <view>
+	<image style="width:100%;" src="/image/gyjy_03.jpg" mode="{{item.mode}}"></image>
+	<text class="page__desc">图片</text>
+  </view>
+  <view>
+	<image style="width:100%;" src="/image/gyjy_03.jpg" mode="{{item.mode}}"></image>
+	<text class="page__desc">图片</text>
+  </view>
+</view>  
+  
+<!--我-->  
+<view hidden="{{currentTab!==2}}">
+  <view>
+	<image style="width:100%;" src="/image/gyjy_02.jpg" mode="{{item.mode}}"></image>
+	<text class="page__desc">图片</text>
+  </view>
+  <view>
+	<image style="width:100%;" src="/image/gyjy_02.jpg" mode="{{item.mode}}"></image>
+	<text class="page__desc">图片</text>
+  </view>
+  <view>
+	<image style="width:100%;" src="/image/gyjy_02.jpg" mode="{{item.mode}}"></image>
+	<text class="page__desc">图片</text>
+  </view>
+  <view>
+	<image style="width:100%;" src="/image/gyjy_02.jpg" mode="{{item.mode}}"></image>
+	<text class="page__desc">图片</text>
+  </view>
+</view>

@@ -1,0 +1,7 @@
+<view class="ws_mainMask" wx:if="{{maskShow}}"></view>
+<view class="main">
+    <image src="https://www.youzhu.com{{info.image}}" mode="widthFix" bindload="bindload" />
+</view>
+<navigator hover-class="none" url="/pages/signup/signup?title={{info.title}}">
+    <button style="background-color:{{info.buttoncolor}};color:{{info.wordcolor}}">{{info.buttonword}}</button>
+</navigator>

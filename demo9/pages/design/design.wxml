@@ -1,0 +1,8 @@
+<view class="ws_coupon">
+    <image src="https://m.youzhu.com/images/weChatAppImages/dzsj.jpg" />
+    <view class="button">
+        <navigator hover-class="none" url="/pages/signup/signup?title=预约定制设计">
+			<image src="https://m.youzhu.com/images/weChatAppImages/yhq_btn.png" />
+		</navigator>
+    </view>
+</view>

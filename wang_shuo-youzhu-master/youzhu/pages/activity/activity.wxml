@@ -1,0 +1,8 @@
+<view class="ws_lineList">
+	<view class="ws_listBox" wx:for="{{shopList}}">
+		<navigator hover-class="none" url="/pages/details/details?id={{item.activity}}">
+			<image src="https://www.youzhu.com{{item.image}}"/>
+			<text class="h2">{{item.title}}</text>
+		</navigator>
+	</view>
+</view>

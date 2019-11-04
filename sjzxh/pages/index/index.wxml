@@ -1,0 +1,34 @@
+<view class="page">
+<view><image mode="widthFix" class="img1" src="/images/01.jpg"></image></view>
+<view class="flex" style="margin-top:0.7rem;">
+  <view class="li" style="width:80%;"><text class="wz">不想工作\n就考研吧！</text><image src="/images/02.jpg" mode="widthFix" class="img2" style="width:35%"></image></view>
+  <view class="li"><text class="wz">成为一个优秀\n的程序猿大招！</text><image src="/images/03.jpg" mode="widthFix" class="img2"></image></view>
+</view>
+<view class="hdq"><text class="tit">互动区</text></view>
+<view class="flex ">
+  <view class="li1 bg"><text class="wz1">基地爆料</text><image src="/images/04.jpg" mode="widthFix" class="img2"></image></view>
+  <view class="li1 bg"><text class="wz1">失物招领</text><image src="/images/05.jpg" mode="widthFix" class="img2"></image></view>
+  <view class="li1 bg"><text class="wz1">兼职服务</text><image src="/images/06.jpg" mode="widthFix" class="img2"></image></view>
+</view>
+<view class="hdq"><text class="tit">最新活动</text></view>
+<view style="margin-bottom:1rem;"><image mode="widthFix" class="img1" src="/images/07.jpg"></image></view>
+<view class="flex ">
+  <view class="li1 bg"><text class="wz1">学生会</text><image src="/images/08.jpg" mode="widthFix" class="img2"></image></view>
+  <view class="li1 bg"><text class="wz1">社团</text><image src="/images/09.jpg" mode="widthFix" class="img2"></image></view>
+  <view class="li1 bg"><text class="wz1">二手交易</text><image src="/images/10.jpg" mode="widthFix" class="img2"></image></view>
+</view>
+<view class="jlh"><image mode="widthFix" class="img1" src="/images/11.jpg"></image></view>
+</view>
+<view class="hdq"><text class="tit">每日推荐</text></view>
+<view class="">
+  <view class="flex1">
+    <view class="img4"><image src="/images/12.jpg" mode="widthFix" class="img3"></image></view>
+    <view class="con"><text>最适合拍照的地方最适合拍照的地方</text></view>
+    <view class="ht"><text>话题42</text></view>
+  </view>
+  <view class="flex1">
+    <view class="img4"><image src="/images/13.jpg" mode="widthFix" class="img3"></image></view>
+    <view class="con"><text>大学里最适合约会的...</text></view>
+    <view class="ht"><text>话题5</text></view>
+  </view>
+</view>

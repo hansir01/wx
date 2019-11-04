@@ -1,0 +1,80 @@
+<form report-submit="true" bindsubmit="submit">
+    <view class="ws_offerFormTop">
+        <view class="ws_fromRow clearfix">
+            <text>您的姓名</text>
+            <input type="text" placeholder="请输入您的姓名" bindinput="changeName" />
+        </view>
+        <view id="ws_tel" class="ws_fromRow clearfix">
+            <text>手机号码</text>
+            <input type="tel" placeholder="请输入手机号码" bindinput="changeTel" />
+        </view>
+        <view class="ws_fromRow clearfix">
+            <text>房屋位置</text>
+            <view class="ws_rightSelect" bindtap="selectOpen">
+                <text wx:if="{{!values[0]}}">请选择地址</text>
+                <text wx:if="{{values[0]}}">{{addrData[values[0]-1].name}} {{addrData[values[0]-1].children[values[1]-1].name}} {{addrData[values[0]-1].children[values[1]-1].children[values[2]-1].name}}</text>
+                <image src="https://m.youzhu.com/images/public/icon_listArrow.svg"></image>
+            </view>
+        </view>
+        <view class="ws_fromRow clearfix">
+            <text>所在小区</text>
+            <input type="text" placeholder="格式：街道/小区/楼/单元/室" bindinput="changeAddrs" />
+        </view>
+        <view class="ws_fromRow clearfix">
+            <text>交房时间</text>
+            <view class="ws_rightSelect" bindtap="jfOpen">
+                <text>{{jiaoFangTime[jfIndex]}}</text>
+                <image src="https://m.youzhu.com/images/public/icon_listArrow.svg"></image>
+            </view>
+        </view>
+    </view>
+    <view class="ws_offerFormCode">
+        <view class="ws_fromRow clearfix">
+            <text>验证码</text>
+            <input type="text" placeholder="请输入手机验证码" value="{{uesrInfo.tel}}" bindinput="changeCode" />
+            <button id="js_getCode" disabled="{{codeDis}}" bindtap="getCode">{{codeText}}</button>
+        </view>
+    </view>
+    <button form-type="submit" class="ws_submitBtn">立即预约</button>
+</form>
+<view class="ws_ts">
+	<text>预约信息提交成功后，我们将会为您同步注册成为有住网会员，您以后可以通过手机号直接登录。</text>
+</view>
+
+<view wx:if="{{jfTime}}" class="citypicker">
+	<view class="ws_addrMask" bindtap="jfOpen"></view>
+	<view class="citypicker">
+		<picker-view indicator-style="height: 40px;" style="width: 100%; height: 300px;" value="{{jfIndex}}" bindchange="jfChange" class="citybody">
+			<view class="cityheader">
+				<view bindtap="jfOpen" class="city-cancel">取消</view>
+				<view bindtap="jfOpen" class="city-true">确定</view>
+			</view>
+			<picker-view-column>
+				<view class="ws_option" wx:for="{{jiaoFangTime}}" wx:key="item">{{item}}</view>
+			</picker-view-column>
+		</picker-view>
+	</view>
+</view>
+<view wx:if="{{condition}}" class="citypicker">
+	<view class="ws_addrMask" bindtap="selectOpen"></view>
+	<view class="citypicker">
+		<picker-view indicator-style="height: 40px;" style="width: 100%; height: 300px;" value="{{values}}" bindchange="bindChange" class="citybody">
+			<view class="cityheader">
+				<view bindtap="selectOpen" class="city-cancel">取消</view>
+				<view bindtap="selectOpen" class="city-true">确定</view>
+			</view>
+			<picker-view-column>
+				<view class="ws_option">请选择省</view>
+				<view class="ws_option" wx:for="{{addrData}}" wx:key="item">{{item.name}}</view>
+			</picker-view-column>
+			<picker-view-column>
+				<view class="ws_option">请选择市</view>
+				<view class="ws_option" wx:for="{{addrData[values[0]-1].children}}" wx:key="item">{{item.name}}</view>
+			</picker-view-column>
+			<picker-view-column>
+				<view class="ws_option">请选择区</view>
+				<view class="ws_option" wx:for="{{addrData[values[0]-1].children[values[1]-1].children}}" wx:key="item">{{item.name}}</view>
+			</picker-view-column>
+		</picker-view>
+	</view>
+</view>

@@ -1,0 +1,25 @@
+<view class="page">
+    <scroll-view scroll-y="true" style="height: 100%; width: 100%; display: flex; flex-direction: column; margin-top:20rpx">
+        <view style="width: 100%; height: auto; margin-bottom:10px;">
+            <swiper indicator-dots="{{indicatorDots}}" vertical="{{vertical}}"
+                    autoplay="{{autoplay}}" interval="{{interval}}" duration="{{duration}}" style="width:100%;height:273.5rpx;">
+                <block wx:for-items="{{swipers}}">
+                    <swiper-item>
+                       <image class="swiper-item" src="{{item.image}}" bindload="imageLoad"/>
+                    </swiper-item>
+                </block>
+            </swiper>
+        </view>
+
+        <view class="big-logo">
+            <block wx:for-items="{{logos}}"> 
+                <navigator url="/page/syno/syno">
+                    <view class="logoinfo">
+                        <image style="width:100rpx; height: 100rpx;" src="{{item.image}}" mode="aspectFit"/>
+                        <text class="logotext">{{item.title}}</text>
+                    </view>
+                </navigator>
+            </block>
+        </view>
+    </scroll-view>
+</view>

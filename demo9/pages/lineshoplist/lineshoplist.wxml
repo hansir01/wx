@@ -1,0 +1,14 @@
+<view class="ws_lineList" wx:if="{{shopList.length > 0}}">
+	<view class="ws_listBox" wx:for="{{shopList}}">
+		<image src="http://m.youzhu.com{{item.pcImg}}"/>
+		<view class="ws_listInfo">
+			<text class="h2">{{item.name}}</text>
+			<text class="p">{{item.address}}</text>
+			<navigator hover-class="none" url="/pages/lineshop/lineshop?id={{item.id}}">查看详情</navigator>
+		</view>
+	</view>
+</view>
+<view class="listNone" wx:if="{{shopList.length == 0}}">
+    <text>您当前的城市未开通线下体验店</text>
+    <button bindtap="getAll">查看全部体验店</button>
+</view>

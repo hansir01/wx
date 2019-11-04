@@ -1,0 +1,3 @@
+page{background: #fff;}
+.ws_coupon image{width: 100%;display: block;height: 848rpx;}
+.ws_coupon .button image{width: 254rpx;height: 254rpx;margin:40rpx auto;}

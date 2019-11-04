@@ -1,0 +1,12 @@
+<view class="page">
+    <scroll-view scroll-y="true" style="height: 100%; width: 100%; display: flex; flex-direction: column; margin-top:20rpx">
+        <view class="big-logo">
+            <block wx:for-items="{{logos}}">
+                <view class="logoinfo">
+                    <image style="width:100rpx; height: 100rpx;" src="{{item.image}}" mode="aspectFit"/>
+                    <text class="logotext">{{item.title}}</text>
+                </view>
+            </block>
+        </view>
+    </scroll-view>
+</view>
